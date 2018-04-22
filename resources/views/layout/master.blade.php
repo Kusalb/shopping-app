@@ -11,6 +11,15 @@
 <body class="">
 <div class="body">
     <div class="">
+
+        <a href="{{ route('logout') }}"
+           onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+            Logout
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="">
+            {{ csrf_field() }}
+        </form>
+
         <div class="right container_col container" role="main">
             <div class="x_panel">
                 @yield('content')

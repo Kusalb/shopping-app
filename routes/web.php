@@ -22,3 +22,12 @@ Route::post('/user/store',['as'=>'user.store','uses'=>'UserController@store']);
 Route::get('/user/index',['as'=>'user.index','uses'=>'UserController@index']);
 
 
+Route::get('/home',['uses' => 'CustomerController@index']);
+Route::get('/', ['uses'=>'CustomerController@index']);
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+
+
+
