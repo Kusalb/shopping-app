@@ -1,4 +1,4 @@
 {{$user->id}}
-{{$user->name}}
+{{$user->username}}
 {{$user->email}}
 {{$user->password}}
